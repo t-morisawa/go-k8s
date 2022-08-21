@@ -3,7 +3,7 @@ module github.com/t-morisawa/go-k8s/grpc
 go 1.16
 
 require (
-	github.com/t-morisawa/go-k8s v0.0.0-20220821133809-f242b194e3f8
+	github.com/t-morisawa/go-k8s v0.0.0-20220821140059-100609bd7911
 	golang.org/x/net v0.0.0-20210226172049-e18ecbb05110 // indirect
 	golang.org/x/sys v0.0.0-20210806184541-e5e7981a1069 // indirect
 	golang.org/x/text v0.3.6 // indirect
