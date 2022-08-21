@@ -25,7 +25,7 @@ import (
 	"log"
 	"time"
 
-	pb "go-k8s/hello"
+	pb "github.com/t-morisawa/go-k8s/hello"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
