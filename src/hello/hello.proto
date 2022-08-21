@@ -1,7 +1,7 @@
 syntax = "proto3";
 
-package main;
-option go_package = "github.com/t-morisawa/go-k8s";
+package hello;
+option go_package = "hello";
 
 service Greeter {
   rpc SayHello (HelloRequest) returns (HelloReply) {}
