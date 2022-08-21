@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: go-k8s-src-pod
+  labels:
+    app: src
+spec:
+  containers:
+  - name: go-k8s-src-container
+    image: localhost:5000/go-k8s-src
+    imagePullPolicy: Never
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-k8s-src-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: src
+  ports:
+    - port: 5050
+      targetPort: 5050
+status:
+  loadBalancer:
+    ingress:
+    - ip: 0.0.0.0

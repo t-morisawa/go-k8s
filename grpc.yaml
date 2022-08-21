@@ -9,3 +9,14 @@ spec:
   - name: go-k8s-grpc-container
     image: localhost:5000/go-k8s-grpc
     imagePullPolicy: Never
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-k8s-grpc-service
+spec:
+  selector:
+    app: grpc
+  ports:
+    - port: 50051
+      targetPort: 50051
