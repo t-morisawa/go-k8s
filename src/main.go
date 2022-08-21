@@ -3,8 +3,9 @@ package main
 import (
 	"net/http"
 
+	grpc_client "src/grpc_client"
+
 	"github.com/gin-gonic/gin"
-	grpc_client "github.com/t-morisawa/go-k8s/src/grpc_client"
 )
 
 var db = make(map[string]string)
