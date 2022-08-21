@@ -34,3 +34,12 @@ kubectl apply -f service.yaml
 参考文献
 
 https://stackoverflow.com/questions/57167104/how-to-use-local-docker-image-in-kubernetes-via-kubectl
+
+## protocol buffersのビルド
+
+```
+cd src
+protoc --go_out=. --go_opt=paths=source_relative \
+    --go-grpc_out=. --go-grpc_opt=paths=source_relative \
+    proto/hello.proto
+```
