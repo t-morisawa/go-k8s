@@ -17,7 +17,7 @@
  */
 
 // Package main implements a client for Greeter service.
-package main
+package grpc_client
 
 import (
 	"context"
@@ -40,7 +40,7 @@ var (
 	name = flag.String("name", defaultName, "Name to greet")
 )
 
-func main() {
+func request() {
 	flag.Parse()
 	// Set up a connection to the server.
 	conn, err := grpc.Dial(*addr, grpc.WithTransportCredentials(insecure.NewCredentials()))
