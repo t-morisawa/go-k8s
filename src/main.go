@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	grpc_client "github.com/t-morisawa/go-k8s/src/grpc_client"
 )
 
 var db = make(map[string]string)
@@ -15,6 +16,7 @@ func setupRouter() *gin.Engine {
 
 	// Ping test
 	r.GET("/ping", func(c *gin.Context) {
+		grpc_client.Request() // grpcでリクエスト
 		c.String(http.StatusOK, "pong")
 	})
 
