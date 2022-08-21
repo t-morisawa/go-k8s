@@ -14,7 +14,8 @@ http://0.0.0.0:5050/ping
 イメージのビルド
 
 ```
-docker build -t localhost:5000/go-k8s .
+docker build -t localhost:5000/go-k8s-src -f Dockerfile.src .
+docker build -t localhost:5000/go-k8s-grpc -f Dockerfile.grpc .
 ```
 
 ローカルでレジストリを起動（これにより、k8sがローカルのDockerイメージをpullできる）
@@ -26,7 +27,8 @@ docker run -d -p 5000:5000 --restart=always --name registry registry:2
 podをapply
 
 ```
-kubectl apply -f pod.yaml
+kubectl apply -f pod-src.yaml
+kubectl apply -f pod-grpc.yaml
 kubectl apply -f service.yaml
 ```
 

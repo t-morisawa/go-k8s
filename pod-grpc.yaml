@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: go-k8s-grpc-pod
+  labels:
+    app: grpc
+spec:
+  containers:
+  - name: go-k8s-grpc-container
+    image: localhost:5000/go-k8s-grpc
+    imagePullPolicy: Never
