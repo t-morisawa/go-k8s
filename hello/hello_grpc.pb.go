@@ -4,7 +4,7 @@
 // - protoc             v3.17.3
 // source: hello/hello.proto
 
-package go_k8s
+package hello
 
 import (
 	context "context"
