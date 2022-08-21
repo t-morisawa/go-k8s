@@ -4,7 +4,7 @@
 
 ```
 cd src
-go run main.go
+GRPC_HOST=localhost go run main.go
 ```
 
 http://0.0.0.0:5050/ping

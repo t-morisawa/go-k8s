@@ -9,6 +9,9 @@ spec:
   - name: go-k8s-src-container
     image: localhost:5000/go-k8s-src
     imagePullPolicy: Never
+    env:
+    - name: GRPC_HOST
+      value: go-k8s-grpc-service
 ---
 apiVersion: v1
 kind: Service
