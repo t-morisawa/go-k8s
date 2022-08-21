@@ -1,4 +1,4 @@
-module github.com/t-morisawa/go-k8s/src
+module src
 
 go 1.16
 

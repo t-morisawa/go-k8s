@@ -27,9 +27,8 @@ docker run -d -p 5000:5000 --restart=always --name registry registry:2
 podをapply
 
 ```
-kubectl apply -f pod-src.yaml
-kubectl apply -f pod-grpc.yaml
-kubectl apply -f service.yaml
+kubectl apply -f src.yaml
+kubectl apply -f grpc.yaml
 ```
 
 

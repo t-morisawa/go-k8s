@@ -1,4 +1,4 @@
-module github.com/t-morisawa/go-k8s/grpc
+module grpc
 
 go 1.16
 
