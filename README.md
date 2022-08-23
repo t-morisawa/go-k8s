@@ -34,24 +34,12 @@ kubectl apply -f ./grpc/grpc.yaml
 
 ### 更新
 
-podを再作成する
-
 ```
-docker build -t localhost:5000/go-k8s-src -f ./src/Dockerfile.src .
-kubectl delete -f ./src/src.yaml
-kubectl apply -f ./src/src.yaml
-```
-
-```
-docker build -t localhost:5000/go-k8s-grpc -f ./grpc/Dockerfile.grpc .
-kubectl delete -f ./grpc/grpc.yaml
-kubectl apply -f ./grpc/grpc.yaml
+. ./bin/update.sh
 ```
 
 ## protocol buffersのビルド
 
 ```
-protoc --go_out=. --go_opt=paths=source_relative \
-    --go-grpc_out=. --go-grpc_opt=paths=source_relative \
-    proto/proto.proto
+. ./bin/build_proto.sh
 ```
