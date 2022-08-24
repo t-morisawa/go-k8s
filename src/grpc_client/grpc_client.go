@@ -42,7 +42,7 @@ var (
 	name = flag.String("name", defaultName, "Name to greet")
 )
 
-func Request() {
+func Request() string {
 	flag.Parse()
 	// Set up a connection to the server.
 	conn, err := grpc.Dial(*addr, grpc.WithTransportCredentials(insecure.NewCredentials()))
@@ -59,5 +59,7 @@ func Request() {
 	if err != nil {
 		log.Fatalf("could not greet: %v", err)
 	}
-	log.Printf("Greeting: %s", r.GetMessage())
+	message := "Greeting by GRPC: " + r.GetMessage()
+	log.Printf(message)
+	return message
 }

@@ -17,8 +17,8 @@ func setupRouter() *gin.Engine {
 
 	// Ping test
 	r.GET("/ping", func(c *gin.Context) {
-		grpc_client.Request() // grpcでリクエスト
-		c.String(http.StatusOK, "pong")
+		message := grpc_client.Request() // grpcでリクエスト
+		c.String(http.StatusOK, message)
 	})
 
 	// Get user value
