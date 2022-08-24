@@ -1,5 +1,7 @@
 # go-k8s
 
+<img src="./docs/figure.png" />
+
 http://0.0.0.0:5050/ping
 
 ## kubernetes環境へのビルド
