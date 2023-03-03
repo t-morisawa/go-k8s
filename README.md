@@ -20,6 +20,13 @@ docker build -t localhost:5000/go-k8s-grpc -f ./grpc/Dockerfile.grpc .
 docker run -d -p 5000:5000 --restart=always --name registry registry:2
 ```
 
+context を docker-desktop に変更
+
+```
+kubectl config get-contexts
+kubectl config use-context docker-desktop
+```
+
 podをapply
 
 ```
